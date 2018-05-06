@@ -96,19 +96,22 @@ from the Markdown document as JSON, extract the text
 to be translated, pass it into API calls, and re-assemble
 the result into Markdown.
 
-To convert `sheep.md` to `sheep.json`,
+To extract the raw JSON representation of Markdown,
+use `pandoc -t json`. This cats a documentation markdown
+file to stdin, feeds stdin to pandoc, and formats the output 
+JSON to be more readable.
 
 ```
-cat sheep.md | pandoc -t json -s | python -m json.tool > sheep.json
+$ cat sheep.md | pandoc -t json -s | python -m json.tool > sheep.json
 ```
 
-In general, the text that needs to be translted is in a dictionary 
-contains a key-value pair `{"t" : "Plain"}` (and another nested
-dictionary that contains each word in the sentence.
+Can also write a pandoc filter in Python to process JSON before re-assembling 
+into Markdown, using the notation:
 
-This gives us a way to proceed with extracting only the 
-text that needs to be modified,nd maintaining proper 
-formatting.
+```
+$ cat ~/codes/bots/b-rainbow-mind-machine/docs/shepherd.md | pandoc -t json -s | ./translate_rooskie.py > stuff.json;
+```
+
 
 
 ### Links
@@ -130,5 +133,7 @@ formatting.
     * [requests quickstart](http://docs.python-requests.org/en/latest/user/quickstart/)
     * `>>> r = requests.put('http://httpbin.org/put', data = {'key':'value'})`
 
-
+* pandocfilters
+    * [pandocfilters](https://github.com/jgm/pandocfilters)
+    * also see [but i don't want to learn haskell](http://pandoc.org/filters.html#but-i-dont-want-to-learn-haskell) on pandoc.org.
 

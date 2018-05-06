@@ -1,0 +1,1440 @@
+{
+    "blocks": [
+        {
+            "t": "Header",
+            "c": [
+                1,
+                [
+                    "sheep",
+                    [],
+                    []
+                ],
+                [
+                    {
+                        "t": "Str",
+                        "c": "Sheep"
+                    }
+                ]
+            ]
+        },
+        {
+            "t": "Para",
+            "c": [
+                {
+                    "t": "Image",
+                    "c": [
+                        [
+                            "",
+                            [],
+                            []
+                        ],
+                        [
+                            {
+                                "t": "Str",
+                                "c": "the"
+                            },
+                            {
+                                "t": "Space"
+                            },
+                            {
+                                "t": "Str",
+                                "c": "sheep"
+                            }
+                        ],
+                        [
+                            "sheep.jpg",
+                            "fig:"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "t": "Para",
+            "c": [
+                {
+                    "t": "Strong",
+                    "c": [
+                        {
+                            "t": "Str",
+                            "c": "The"
+                        },
+                        {
+                            "t": "Space"
+                        },
+                        {
+                            "t": "Str",
+                            "c": "rainbow"
+                        },
+                        {
+                            "t": "Space"
+                        },
+                        {
+                            "t": "Str",
+                            "c": "mind"
+                        },
+                        {
+                            "t": "Space"
+                        },
+                        {
+                            "t": "Str",
+                            "c": "machine"
+                        },
+                        {
+                            "t": "Space"
+                        },
+                        {
+                            "t": "Str",
+                            "c": "sheep."
+                        },
+                        {
+                            "t": "Space"
+                        },
+                        {
+                            "t": "Link",
+                            "c": [
+                                [
+                                    "",
+                                    [],
+                                    []
+                                ],
+                                [
+                                    {
+                                        "t": "Str",
+                                        "c": "credit"
+                                    }
+                                ],
+                                [
+                                    "credits.md",
+                                    ""
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "t": "Para",
+            "c": [
+                {
+                    "t": "Str",
+                    "c": "Structure"
+                },
+                {
+                    "t": "Space"
+                },
+                {
+                    "t": "Str",
+                    "c": "of"
+                },
+                {
+                    "t": "Space"
+                },
+                {
+                    "t": "Str",
+                    "c": "the"
+                },
+                {
+                    "t": "Space"
+                },
+                {
+                    "t": "Str",
+                    "c": "Sheep:"
+                }
+            ]
+        },
+        {
+            "t": "BulletList",
+            "c": [
+                [
+                    {
+                        "t": "Plain",
+                        "c": [
+                            {
+                                "t": "Str",
+                                "c": "Constructor:"
+                            }
+                        ]
+                    },
+                    {
+                        "t": "BulletList",
+                        "c": [
+                            [
+                                {
+                                    "t": "Plain",
+                                    "c": [
+                                        {
+                                            "t": "Str",
+                                            "c": "Create"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "lumberjack"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "logger"
+                                        }
+                                    ]
+                                }
+                            ],
+                            [
+                                {
+                                    "t": "Plain",
+                                    "c": [
+                                        {
+                                            "t": "Str",
+                                            "c": "Initialize"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "Twitter"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "API"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "instance"
+                                        }
+                                    ]
+                                }
+                            ],
+                            [
+                                {
+                                    "t": "Plain",
+                                    "c": [
+                                        {
+                                            "t": "Str",
+                                            "c": "Initialize"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "parameters"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "from"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "JSON"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "file"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "(sheep-specific/account-specific"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "parameters)"
+                                        }
+                                    ]
+                                }
+                            ],
+                            [
+                                {
+                                    "t": "Plain",
+                                    "c": [
+                                        {
+                                            "t": "Str",
+                                            "c": "Initialize"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "parameters"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "passed"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "into"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "constructor"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "(overwrites"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "JSON"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "file"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "parameters)"
+                                        }
+                                    ]
+                                }
+                            ],
+                            [
+                                {
+                                    "t": "Plain",
+                                    "c": [
+                                        {
+                                            "t": "Str",
+                                            "c": "These"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "parameters"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "are"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "available"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "as"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Code",
+                                            "c": [
+                                                [
+                                                    "",
+                                                    [],
+                                                    []
+                                                ],
+                                                "self.params"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        ]
+                    }
+                ],
+                [
+                    {
+                        "t": "Plain",
+                        "c": [
+                            {
+                                "t": "Str",
+                                "c": "Twitter"
+                            },
+                            {
+                                "t": "Space"
+                            },
+                            {
+                                "t": "Str",
+                                "c": "API"
+                            },
+                            {
+                                "t": "Space"
+                            },
+                            {
+                                "t": "Str",
+                                "c": "initialization"
+                            },
+                            {
+                                "t": "Space"
+                            },
+                            {
+                                "t": "Str",
+                                "c": "method:"
+                            }
+                        ]
+                    },
+                    {
+                        "t": "BulletList",
+                        "c": [
+                            [
+                                {
+                                    "t": "Plain",
+                                    "c": [
+                                        {
+                                            "t": "Str",
+                                            "c": "Initializes"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "Twitter"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "API"
+                                        }
+                                    ]
+                                }
+                            ],
+                            [
+                                {
+                                    "t": "Plain",
+                                    "c": [
+                                        {
+                                            "t": "Str",
+                                            "c": "Uses"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Code",
+                                            "c": [
+                                                [
+                                                    "",
+                                                    [],
+                                                    []
+                                                ],
+                                                "self.params"
+                                            ]
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "to"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "set"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "consumer"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "token"
+                                        }
+                                    ]
+                                }
+                            ],
+                            [
+                                {
+                                    "t": "Plain",
+                                    "c": [
+                                        {
+                                            "t": "Str",
+                                            "c": "Uses"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "parameters"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "from"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "JSON"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "file"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "to"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "get"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "oauth"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "token"
+                                        }
+                                    ]
+                                }
+                            ]
+                        ]
+                    }
+                ],
+                [
+                    {
+                        "t": "Plain",
+                        "c": [
+                            {
+                                "t": "Str",
+                                "c": "Perform"
+                            },
+                            {
+                                "t": "Space"
+                            },
+                            {
+                                "t": "Str",
+                                "c": "action"
+                            },
+                            {
+                                "t": "Space"
+                            },
+                            {
+                                "t": "Str",
+                                "c": "method(s):"
+                            }
+                        ]
+                    },
+                    {
+                        "t": "BulletList",
+                        "c": [
+                            [
+                                {
+                                    "t": "Plain",
+                                    "c": [
+                                        {
+                                            "t": "Str",
+                                            "c": "Uses"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "dispatcher"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "method"
+                                        }
+                                    ]
+                                }
+                            ],
+                            [
+                                {
+                                    "t": "Plain",
+                                    "c": [
+                                        {
+                                            "t": "Str",
+                                            "c": "If"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "we"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "call"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Code",
+                                            "c": [
+                                                [
+                                                    "",
+                                                    [],
+                                                    []
+                                                ],
+                                                "perform_action('tweet')"
+                                            ]
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": ","
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "this"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "will"
+                                        },
+                                        {
+                                            "t": "SoftBreak"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "look"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "for"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "a"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "method"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "called"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Code",
+                                            "c": [
+                                                [
+                                                    "",
+                                                    [],
+                                                    []
+                                                ],
+                                                "tweet()"
+                                            ]
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "and"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "run"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "it."
+                                        }
+                                    ]
+                                }
+                            ]
+                        ]
+                    }
+                ],
+                [
+                    {
+                        "t": "Plain",
+                        "c": [
+                            {
+                                "t": "Str",
+                                "c": "Action"
+                            },
+                            {
+                                "t": "Space"
+                            },
+                            {
+                                "t": "Str",
+                                "c": "methods"
+                            },
+                            {
+                                "t": "Space"
+                            },
+                            {
+                                "t": "Str",
+                                "c": "(general"
+                            },
+                            {
+                                "t": "Space"
+                            },
+                            {
+                                "t": "Str",
+                                "c": "template):"
+                            }
+                        ]
+                    },
+                    {
+                        "t": "BulletList",
+                        "c": [
+                            [
+                                {
+                                    "t": "Plain",
+                                    "c": [
+                                        {
+                                            "t": "Str",
+                                            "c": "User"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "will"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "pass"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "in"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "extra"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "parameters"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "(action-specific"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "parameters)"
+                                        }
+                                    ]
+                                }
+                            ],
+                            [
+                                {
+                                    "t": "Plain",
+                                    "c": [
+                                        {
+                                            "t": "Str",
+                                            "c": "Parameter"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "validation"
+                                        }
+                                    ]
+                                }
+                            ],
+                            [
+                                {
+                                    "t": "Plain",
+                                    "c": [
+                                        {
+                                            "t": "Str",
+                                            "c": "Set"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "API"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "endpoint"
+                                        }
+                                    ]
+                                }
+                            ],
+                            [
+                                {
+                                    "t": "Plain",
+                                    "c": [
+                                        {
+                                            "t": "Str",
+                                            "c": "Use"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "oauth"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "token"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "to"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "create"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "oath"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "Client"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "object"
+                                        }
+                                    ]
+                                }
+                            ],
+                            [
+                                {
+                                    "t": "Plain",
+                                    "c": [
+                                        {
+                                            "t": "Str",
+                                            "c": "use"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "client"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "to"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "make"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "POST"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "request"
+                                        }
+                                    ]
+                                }
+                            ]
+                        ]
+                    }
+                ],
+                [
+                    {
+                        "t": "Plain",
+                        "c": [
+                            {
+                                "t": "Str",
+                                "c": "Tweet"
+                            },
+                            {
+                                "t": "Space"
+                            },
+                            {
+                                "t": "Str",
+                                "c": "method:"
+                            }
+                        ]
+                    },
+                    {
+                        "t": "BulletList",
+                        "c": [
+                            [
+                                {
+                                    "t": "Plain",
+                                    "c": [
+                                        {
+                                            "t": "Str",
+                                            "c": "Tweet"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "method"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "has"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "an"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "inner"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "loop"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "and"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "an"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "outer"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "loop"
+                                        }
+                                    ]
+                                }
+                            ],
+                            [
+                                {
+                                    "t": "Plain",
+                                    "c": [
+                                        {
+                                            "t": "Str",
+                                            "c": "In"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "the"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "inner"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "loop"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "the"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "bot"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "populates"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "a"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "queue"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "and"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "tweets"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "each"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "tweet"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "in"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "the"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "queue"
+                                        }
+                                    ]
+                                }
+                            ],
+                            [
+                                {
+                                    "t": "Plain",
+                                    "c": [
+                                        {
+                                            "t": "Str",
+                                            "c": "In"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "the"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "outer"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "loop"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "(infinite"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "loop)"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "the"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "bot"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "continually"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "repeats"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "the"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "inner"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "loop"
+                                        }
+                                    ]
+                                }
+                            ],
+                            [
+                                {
+                                    "t": "Plain",
+                                    "c": [
+                                        {
+                                            "t": "Str",
+                                            "c": "Inner"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "sleep/outer"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "sleep"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "set"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "the"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "time"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "interval"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "between"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "tweets"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "and"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "between"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "runs"
+                                        },
+                                        {
+                                            "t": "SoftBreak"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "of"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "the"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "inner"
+                                        },
+                                        {
+                                            "t": "Space"
+                                        },
+                                        {
+                                            "t": "Str",
+                                            "c": "loop"
+                                        }
+                                    ]
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            ]
+        }
+    ],
+    "pandoc-api-version": [
+        1,
+        17,
+        4,
+        2
+    ],
+    "meta": {}
+}

@@ -5,7 +5,7 @@ from google.cloud import translate
 
 def translate_ru(elem, doc):
     if type(elem)==Para:
-        english = stringify(doc)
+        english = stringify(elem)
         translate_client = translate.Client()
         rooskie = translate_client.translate(
                 english,

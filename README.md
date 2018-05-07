@@ -7,9 +7,9 @@ by applying the magic of
 Google Cloud Translate API
 with a pandoc filter.
 
-[Part 1: Setup](#Setup)
+[Part 1: Setup](#setup)
 
-[Part 2: Translate](#Translate)
+[Part 2: Translate](#translate)
 
 # Setup
 
@@ -166,11 +166,18 @@ To translate Markdown text to Russian, we want to look for
 Para (paragraph) components, and extract the text from 
 each paragraph as a string.
 
+```text
+cat shepherd.md | pandoc -t json -f gfm -s | ./panflute_rooskie.py 
+```
+
+
 The `panflute_rooskie.py` filter does the translating.
 Here is the basic structure of that document.
 Here we use the Google Cloud API from Python directly,
 rather than fussing with assembling our own payloads
 and using the `requests` library.
+
+**`panflute_rooskie.py`:**
 
 ```python
 from panflute import *
@@ -209,7 +216,7 @@ def translate_ru(elem, doc):
 Note that this method is much easier, but requires
 exporting an environment variable `$GOOGLE_APPLICATION_CREDENTIALS`
 that points to a JSON file with your API keys
-(see [Setup](#Setup) section above):
+(see [Setup](#setup) section above):
 
 ```
 export GOOGLE_APPLICATION_CREDENTIALS=/path/to/project-key-00000.json
@@ -239,6 +246,18 @@ def translate_ru(elem, doc):
             return_para.append(Space)
         return Para(*return_para)
 ```
+
+
+## Pandoc Parser: JSON-to-Markdown Parser
+
+To return everything back into Markdown, the last step of the pipeline
+is to add another call to pandoc, but with the formats reversed, so that
+it will turn JSON back into Markdown:
+
+```text
+cat shepherd.md | pandoc -t json -f gfm -s | ./panflute_rooskie.py  | pandoc -f json -t gfm -s > shepherd_ru.md
+```
+
 
 
 ### Links

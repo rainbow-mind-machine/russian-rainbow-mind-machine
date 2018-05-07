@@ -3,17 +3,22 @@
 This repository translates 
 [rainbow mind machine](https://git.charlesreid1.com/b-rainbow-mind-machine)
 documentation into Russian
-using the Google Cloud Translate API.
+by applying the magic of 
+Google Cloud Translate API
+with a pandoc filter.
 
-## The Steps
+[Part 1: Setup](#Setup)
 
-Rundown of necessary steps:
+[Part 2: Translate](#Translate)
+
+# Setup
+
+Rundown of necessary setup steps:
 
 * Create Google Cloud account
 * Enable Googe Cloud Translate API
-* Set up command line tool
-* Test command line tool
-* Parse and translate Markdown: English to Russian
+* Set up gcloud command line tool
+* Test gcloud command line tool
 
 
 ## Create Google Cloud Account
@@ -41,7 +46,7 @@ The prior step will give you a JSON key file.
 Associate this with the command line tool using 
 the `auth activate-service-account` verb:
 
-```
+```text
 gcloud auth activate-service-account --key-file=[PATH]
 ```
 
@@ -50,7 +55,7 @@ gcloud auth activate-service-account --key-file=[PATH]
 
 The API endpoint we will use is:
 
-```
+```text
 https://translation.googleapis.com/language/translate/v2
 ```
 
@@ -62,8 +67,8 @@ credentials easily:
 
 The command 
 
-```
-$ curl -s -X POST -H "Content-Type: application/json" \
+```text
+curl -s -X POST -H "Content-Type: application/json" \
     -H "Authorization: Bearer "$(gcloud auth print-access-token) \
     --data "{
         'q':'Rainbow mind machine is extendable to keep bots from becoming boring. There are only two components to extend. These two components have a simple and clear order of function calls. Rainbow mind machine uses sensible defaults.',
@@ -75,7 +80,7 @@ $ curl -s -X POST -H "Content-Type: application/json" \
 
 should yield the result:
 
-```
+```text
 {
   "data": {
     "translations": [
@@ -89,29 +94,151 @@ should yield the result:
 
 So far, so good.
 
-## Parse and Translate Markdown: English to Russian
 
-To do this, we use pandoc to extract information
-from the Markdown document as JSON, extract the text
-to be translated, pass it into API calls, and re-assemble
-the result into Markdown.
 
-To extract the raw JSON representation of Markdown,
-use `pandoc -t json`. This cats a documentation markdown
-file to stdin, feeds stdin to pandoc, and formats the output 
-JSON to be more readable.
+
+# Translate
+
+We want to parse and translate Markdown written
+in English, and turn it into Markdown written in 
+Russian. We use pandoc to parse the Markdown file
+and identify the bits that can be translated,
+pass them to the Google Cloud Translate API,
+and convert the translated text back into
+Markdown.
+
+## Pandoc Parser: Markdown-to-JSON Parser
+
+We use pandoc to convert structured Markdown into JSON.
+This is done using the `-f` flag to specify the input format
+and the `-t` flag to specify the target format:
+
+```text
+pandoc -t json -f gfm my_markdown_file.md
+```
+
+Here, we use `gfm` (Github-flavored markdown).
+
+We can also read documents from stdin using the `-s` flag:
+
+```text
+cat my_markdown_file.md | pandoc -t json -f gfm -s 
+```
+
+The resulting JSON is ready to be parsed using a pandoc filter.
+
+Note that if you wish to visualize the structure of the JSON
+before processing it further, you can pipe it to `python -m json.tool`,
+which nicely formats the JSON for printing and visualizing:
+
+```text
+cat my_markdown_file.md | pandoc -t json -f gfm -s | python -m json.tool 
+```
+
+
+## Pandoc Filter: JSON-to-JSON Filter
+
+To translate Markdown from English to Russian,
+we use pandoc to parse the Markdown file and 
+extract the text that needs to be translated.
+
+Specifically, we write a JSON-to-JSON pandoc filter
+using [panflute](http://scorreia.com/software/panflute/index.html),
+a Python library for writing pandoc filters.
+
+The syntax is as follows:
+
+```text
+cat my_markdown_file.md | pandoc -t json -f gfm -s | ./my_panflute_filter.py 
+```
+
+The convention for panflute filters is that each document component
+is passed to the panflute filter, and remains unmodified if the filter
+returns nothing. (This saves the filter some extra work.)
+
+In other words, the filter should decide when to take action and 
+modify a document component.
+
+
+## Pandoc Filter: Translate
+
+To translate Markdown text to Russian, we want to look for 
+Para (paragraph) components, and extract the text from 
+each paragraph as a string.
+
+The `panflute_rooskie.py` filter does the translating.
+Here is the basic structure of that document.
+Here we use the Google Cloud API from Python directly,
+rather than fussing with assembling our own payloads
+and using the `requests` library.
+
+```python
+from panflute import *
+from google.cloud import translate
+
+
+def translate_ru(elem, doc):
+    ...
+
+
+def main(doc=None):
+    return run_filter(translate_ru, doc=doc)
+
+
+if __name__ == "__main__":
+    main()
+```
+
+When we run this, it passes each document element through
+`translate_ru()`. We want this method to search for 
+paragraphs, extract the string, and pass them to the 
+Translate API:
+
+```python
+def translate_ru(elem, doc):
+    if type(elem)==Para:
+        english = stringify(doc)
+        translate_client = translate.Client()
+        rooskie = translate_client.translate(
+                english,
+                target_language = 'ru')
+        
+        ...
+```
+
+Note that this method is much easier, but requires
+exporting an environment variable `$GOOGLE_APPLICATION_CREDENTIALS`
+that points to a JSON file with your API keys
+(see [Setup](#Setup) section above):
 
 ```
-$ cat sheep.md | pandoc -t json -s | python -m json.tool > sheep.json
+export GOOGLE_APPLICATION_CREDENTIALS=/path/to/project-key-00000.json
 ```
 
-Can also write a pandoc filter in Python to process JSON before re-assembling 
-into Markdown, using the notation:
+The translation API will return unicode text. This needs to be 
+converted into a format that pandoc can understand. Each word 
+must be wrapped using a `Str()` string object, with a `Space` 
+object between each word.
 
-```
-$ cat ~/codes/bots/b-rainbow-mind-machine/docs/shepherd.md | pandoc -t json -s | ./translate_rooskie.py > stuff.json;
-```
+To do this, use some basic Python functionality: the `split()`
+method and the `append()` method, with a splat `*` operator for
+good measure:
 
+```python
+def translate_ru(elem, doc):
+    if type(elem)==Para:
+        english = stringify(doc)
+        translate_client = translate.Client()
+        rooskie = translate_client.translate(
+                english,
+                target_language = 'ru')
+        rooskie = rooskie['translatedText']
+        return_para = []
+        for r in rooskie.split(" "):
+            return_para.append(Str(r))
+            return_para.append(Space)
+        return Para(*return_para)
+```
 
 
 ### Links

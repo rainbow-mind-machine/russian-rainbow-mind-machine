@@ -37,6 +37,13 @@ the `auth activate-service-account` verb:
 gcloud auth activate-service-account --key-file=[PATH]
 ```
 
+Set this permanently by setting the location of the key file
+using an environment variable:
+
+```
+export GOOGLE_APPLICATION_CREDENTIALS=${PWD}/krash.json
+```
+
 
 ## Test Command Line Tool
 

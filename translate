@@ -18,7 +18,10 @@ TODO:
     - call the pandoc API directly to avoid subprocess
 """
 
-if not os.path.isdir('rmm/docs'):
+RMM_DOCS = 'rmm/docs'
+RRMM_DOCS = 'ruskie_docs'
+
+if not os.path.isdir(RMM_DOCS):
     err = "ERROR: No rmm/docs/ folder was found.\n"
     err += "Try cloning with --recursive,\n"
     err += "or running git submodule update --init\n"
@@ -26,28 +29,39 @@ if not os.path.isdir('rmm/docs'):
 
 cwd = os.getcwd()
 
-for en_md in glob.glob("rmm/docs/*.md"):
+print("[+] Welcome to russian rainbow mind machine!")
 
-    print("Now processing file %s"%(en_md))
+print("[+] Making directory for Russian documentation")
+subprocess.call(['mkdir','-p',RRMM_DOCS], cwd=cwd)
 
-    #subprocess.call(['set','-x'])
+for en_md in glob.glob( os.path.join(RMM_DOCS,"index.md") ):
 
-    ## Command 1:
-    ## cat <md>
-    #cat_cmd = ['cat', en_md]
-    #cat_proc = subprocess.Popen(cat_cmd, stdout=subprocess.PIPE)
+    basename = os.path.split(en_md)[-1]
+    target = os.path.join(RRMM_DOCS,basename)
 
-    ## pandoc: english markdown to json
-    ## -f from_format
-    ## -t to_format
-    #pandoc_from_en_cmd = ['pandoc','-f','gfm','-t','json','-s']
-    #pandoc_from_en_proc = subprocess.Popen(pandoc_from_en_cmd, stdin=cat_proc.stdout, stdout=subprocess.PIPE)
+    print("    [+] Now making documentation for %s to %s"%(en_md,target))
+    
+    # Command 1:
+    # cat <md>
+    cat_cmd = ['cat', en_md]
+    cat_proc = subprocess.Popen(cat_cmd, stdout=subprocess.PIPE)
 
-    #pandoc_filter_cmd = ['filters/ruskie.py']
-    #pandoc_filter_proc = subprocess.Popen(pandoc_filter_cmd, stdin=pandoc_from_en_proc.stdout, stdout=subprocess.PIPE)
+    # pandoc: english markdown to json
+    # -f from_format
+    # -t to_format
+    pandoc_from_en_cmd = ['pandoc','-f','gfm','-t','json','-s']
+    pandoc_from_en_proc = subprocess.Popen(pandoc_from_en_cmd, stdin=cat_proc.stdout, stdout=subprocess.PIPE)
 
-    #pandoc_to_ru_cmd = ['pandoc','-f','json','-t','gfm']
-    #pandoc_to_ru_proc = subprocess.Popen(pandoc_to_ru_cmd, stdin=pandoc_filter_proc.stdout)
+    pandoc_filter_cmd = ['filters/ruskie.py']
+    pandoc_filter_proc = subprocess.Popen(pandoc_filter_cmd, stdin=pandoc_from_en_proc.stdout, stdout=subprocess.PIPE)
 
-    #subprocess.call(['set','+x'])
+    pandoc_to_ru_cmd = ['pandoc','-f','json','-t','gfm']
+    pandoc_to_ru_proc = subprocess.Popen(pandoc_to_ru_cmd, stdin=pandoc_filter_proc.stdout, stdout=subprocess.PIPE)
+
+    with open(target,'wb') as f:
+        f.write(pandoc_to_ru_proc.stdout.read())
+
+    print("    [+] Finished with file %s, translated to %s"%(en_md,target))
+
+print("[+] All done!")
 

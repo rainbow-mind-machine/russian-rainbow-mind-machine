@@ -1,0 +1,53 @@
+#!/usr/bin/env python
+import os, glob, subprocess
+
+"""
+Carry Out the Translate Task
+
+
+Use glob to find all markdown files in `rmm/docs/`
+
+For each one, run the pipeline using subprocess:
+    - run pipeline on each document in `rmm/docs/`
+    - pandoc markdown-to-json
+    - panflute filter to translate json and extract links
+    - pandoc json-to-markdown
+    - output documents in ruskie_docs/
+
+TODO:
+    - call the pandoc API directly to avoid subprocess
+"""
+
+if not os.path.isdir('rmm/docs'):
+    err = "ERROR: No rmm/docs/ folder was found.\n"
+    err += "Try cloning with --recursive,\n"
+    err += "or running git submodule update --init\n"
+    raise Exception(err)
+
+cwd = os.getcwd()
+
+for en_md in glob.glob("rmm/docs/*.md"):
+
+    print("Now processing file %s"%(en_md))
+
+    #subprocess.call(['set','-x'])
+
+    ## Command 1:
+    ## cat <md>
+    #cat_cmd = ['cat', en_md]
+    #cat_proc = subprocess.Popen(cat_cmd, stdout=subprocess.PIPE)
+
+    ## pandoc: english markdown to json
+    ## -f from_format
+    ## -t to_format
+    #pandoc_from_en_cmd = ['pandoc','-f','gfm','-t','json','-s']
+    #pandoc_from_en_proc = subprocess.Popen(pandoc_from_en_cmd, stdin=cat_proc.stdout, stdout=subprocess.PIPE)
+
+    #pandoc_filter_cmd = ['filters/ruskie.py']
+    #pandoc_filter_proc = subprocess.Popen(pandoc_filter_cmd, stdin=pandoc_from_en_proc.stdout, stdout=subprocess.PIPE)
+
+    #pandoc_to_ru_cmd = ['pandoc','-f','json','-t','gfm']
+    #pandoc_to_ru_proc = subprocess.Popen(pandoc_to_ru_cmd, stdin=pandoc_filter_proc.stdout)
+
+    #subprocess.call(['set','+x'])
+

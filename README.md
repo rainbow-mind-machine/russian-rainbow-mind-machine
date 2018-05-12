@@ -7,6 +7,8 @@ by applying the magic of
 Google Cloud Translate API
 with a pandoc filter.
 
+[How this repo is organized](Organization.md)
+
 [Part 1: Setup](Setup.md)
 
 [Part 2: Translate](Translate.md)

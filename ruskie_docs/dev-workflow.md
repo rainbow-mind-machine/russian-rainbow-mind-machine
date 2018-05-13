@@ -58,10 +58,14 @@
 Рабочий процесс Pypi:
 
   - One-time: set up your .pypirc
+
   - Make the package bundle
+
   - Upload the package bundle to Pypi
+
   - Test the package with virtualenv
 
+  - 
 # Рабочий процесс Dockerhub
 
 # связи

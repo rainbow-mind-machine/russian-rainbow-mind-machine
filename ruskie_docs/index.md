@@ -1,5 +1,7 @@
 # Радуга-ум-машина
 
+tinysheep
+
 Радужная машина разума - расширяемая структура для запуска бот-стрит в
 Python.
 
@@ -46,7 +48,17 @@ Python.
 См. Dev-workflow для получения информации о рабочем процессе для
 загрузки изменений в pypi и dockerhub.
 
+# Связаться
+
+Связаться с автором: rainbowmindmachine\_\_at\_\_charlesreid1.com
+
 # связи
+
+[Keymaker](keymaker.md)
+
+[Пасти](shepherd.md)
+
+[Овца](sheep.md)
 
 [машина радужного разума на
 pypi](https://pypi.python.org/pypi/rainbowmindmachine/0.4)

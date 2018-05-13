@@ -5,11 +5,16 @@
 
 Помните, у нас есть только 3 объекта, которые нам нужно понять:
 
-  - The Keymaker (makes/manages keys and authenticates with Twitter)
-  - The Shepherd (one shepherd = one bot flock, runs the flock)
-  - The Sheep (one sheep = one bot, defines bot behavior)
+  - [The Keymaker](keymaker.md) (makes/manages keys and authenticates
+    with Twitter)
+  - [The Shepherd](shepherd.md) (runs the flock; one shepherd = one bot
+    flock)
+  - [The Sheep](sheep.md) (runs a bot, and defines bot's behavior; one
+    sheep = one bot)
 
 # Keymaker: шаг аутентификации
+
+Также см. Страницу мастера.
 
 Первым шагом в машине радужного разума является запуск Keymaker, чтобы
 дать разрешение на использование твита от имени каждого из наших
@@ -63,7 +68,9 @@ k.make_key({
 Когда этот скрипт запущен, Keymaker проведет ряд интерактивных шагов для
 создания ключей от каждого элемента.
 
-# Запуск Bot Flock
+# Пастух для запуска бот-флока
+
+Также смотрите страницу пастуха.
 
 Как только это будет сделано, сделайте Пастуха для бот-паства и укажите
 его клавишам, созданным в каталоге keys / keymaker:
@@ -86,6 +93,8 @@ sh.perform_pool_action('tweet')
 затем будет прокручивать один поток на одну овцу.
 
 # Настройка овец
+
+Также смотрите страницу овец.
 
 Мы не указали, какую овцу мы хотим, чтобы Пастух создал, поэтому Пастух
 использует класс Овца по умолчанию.
@@ -127,8 +136,20 @@ sh.perform_pool_action('tweet')
 стихотворение из текстового файла и чирикает стихотворение по
 одной строке за раз.
 
-См. Example\_flocks / ginsberg\_botflock и b-ginsberg на
-git.charlesreid1.com.
+Исходный код: git.charlesreid1.com/bots/b-ginsberg.
+
+Страница Bot: pages.charlesreid1.com/b-ginsberg
+
+# Пример: Райский Потерянный Бот Флок
+
+Боевая стая Paradise Lost - еще один простой пример стаи, в которой
+работает несколько PoemSheep, причем каждый овец загружает
+стихотворение из текстового файла и чирикает стихотворение по
+одной строке за раз.
+
+Исходный код: git.charlesreid1.com/bots/b-milton.
+
+Страница Bot: страницы.charlesreid1.com/b-milton
 
 # Пример: Apollo Space Junk Bot Flock
 
@@ -136,8 +157,9 @@ Apollo Space Junk Bot Flock использует генерацию queneau дл
 фальшивой радиопередачи космической миссии Apollo. Эта бот-стая
 запускает несколько QueneauSheep.
 
-См. Example\_flocks / apollo\_botflock и b-apollo на
-git.charlesreid1.com.
+Исходный код: git.charlesreid1.com/bots/b-apollo.
+
+Страница Bot: pages.charlesreid1.com/b-apollo
 
 # Пример: Mathematics Tripos Bot
 
@@ -148,20 +170,31 @@ git.charlesreid1.com.
 Триполи Кембриджского университета, в формате LaTeX. Каждое уравнение
 LaTeX преобразуется в png. Каждый бот задает новый вопрос.
 
-Смотрите b-tripos на git.charlesreid1.com.
+Исходный код: git.charlesreid1.com/bots/b-tripos.
+
+Страница Bot:
+pages.charlesreid1.com/b-tripos
 
 # связи
 
-[example\_flocks /
-ginsberg\_botflock](/example_flocks/ginsberg_botflock/)
+[ключеделалку](keymaker.md)
 
-[b-ginsberg на
-git.charlesreid1.com](https://git.charlesreid1.com/bots/b-ginsberg)
+[пасти](shepherd.md)
 
-[example\_flocks / apollo\_botflock](/example_flocks/apollo_botflock/)
+[овца](sheep.md)
 
-[b-apollo на
-git.charlesreid1.com](https://git.charlesreid1.com/bots/b-apollo)
+[git.charlesreid1.com/bots/b-ginsberg](https://git.charlesreid1.com/bots/b-ginsberg)
 
-[b-tripos на
-git.charlesreid1.com](https://git.charlesreid1.com/bots/b-tripos)
+[pages.charlesreid1.com/b-ginsberg](https://pages.charlesreid1.com/b-ginsberg)
+
+[git.charlesreid1.com/bots/b-milton](https://git.charlesreid1.com/bots/b-milton)
+
+[pages.charlesreid1.com/b-milton](https://pages.charlesreid1.com/b-milton)
+
+[git.charlesreid1.com/bots/b-apollo](https://git.charlesreid1.com/bots/b-apollo)
+
+[pages.charlesreid1.com/b-apollo](https://pages.charlesreid1.com/b-apollo)
+
+[git.charlesreid1.com/bots/b-tripos](https://git.charlesreid1.com/bots/b-tripos)
+
+[pages.charlesreid1.com/b-tripos](https://pages.charlesreid1.com/b-tripos)

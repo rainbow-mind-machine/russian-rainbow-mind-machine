@@ -21,8 +21,9 @@ TODO:
 RMM_DOCS = 'rmm/docs'
 RRMM_DOCS = 'ruskie_docs'
 
-if not os.path.isdir(RMM_DOCS):
+if not os.path.isdir(os.path.join(os.getcwd(),RMM_DOCS)):
     err = "ERROR: No rmm/docs/ folder was found.\n"
+    err += "Looked in %s\n"%(os.path.join(os.getcwd(),RMM_DOCS))
     err += "Try cloning with --recursive,\n"
     err += "or running git submodule update --init\n"
     raise Exception(err)
@@ -34,12 +35,20 @@ print("[+] Welcome to russian rainbow mind machine!")
 print("[+] Making directory for Russian documentation")
 subprocess.call(['mkdir','-p',RRMM_DOCS], cwd=cwd)
 
-for en_md in glob.glob( os.path.join(RMM_DOCS,"*.md") ):
+markdown_files = []
+for fdir,fdirnames,fnames in os.walk(os.path.join(os.getcwd(),RMM_DOCS)):
+    for f in fnames:
+        if f[-3:]=='.md':
+            markdown_files.append( os.path.join( fdir, f ) )
+
+for en_md in markdown_files:
 
     basename = os.path.split(en_md)[-1]
     target = os.path.join(RRMM_DOCS,basename)
 
-    print("    [+] Now making documentation for %s to %s"%(en_md,target))
+    pname = os.path.join(RMM_DOCS,basename)
+
+    print("    [+] Now making documentation for %s to %s"%(pname,target))
     
     # Command 1:
     # cat <md>
@@ -52,16 +61,18 @@ for en_md in glob.glob( os.path.join(RMM_DOCS,"*.md") ):
     pandoc_from_en_cmd = ['pandoc','-f','gfm','-t','json','-s']
     pandoc_from_en_proc = subprocess.Popen(pandoc_from_en_cmd, stdin=cat_proc.stdout, stdout=subprocess.PIPE)
 
+    # pandoc filter to translate with google cloud
     pandoc_filter_cmd = ['filters/ruskie.py']
     pandoc_filter_proc = subprocess.Popen(pandoc_filter_cmd, stdin=pandoc_from_en_proc.stdout, stdout=subprocess.PIPE)
 
+    # pandoc: json to russian markdown
     pandoc_to_ru_cmd = ['pandoc','-f','json','-t','gfm']
     pandoc_to_ru_proc = subprocess.Popen(pandoc_to_ru_cmd, stdin=pandoc_filter_proc.stdout, stdout=subprocess.PIPE)
 
     with open(target,'wb') as f:
         f.write(pandoc_to_ru_proc.stdout.read())
 
-    print("    [+] Finished with file %s, translated to %s"%(en_md,target))
+    print("    [+] Finished with file %s, translated to %s"%(pname,target))
 
 print("[+] All done!")
 

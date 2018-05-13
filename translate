@@ -34,7 +34,7 @@ print("[+] Welcome to russian rainbow mind machine!")
 print("[+] Making directory for Russian documentation")
 subprocess.call(['mkdir','-p',RRMM_DOCS], cwd=cwd)
 
-for en_md in glob.glob( os.path.join(RMM_DOCS,"index.md") ):
+for en_md in glob.glob( os.path.join(RMM_DOCS,"*.md") ):
 
     basename = os.path.split(en_md)[-1]
     target = os.path.join(RRMM_DOCS,basename)

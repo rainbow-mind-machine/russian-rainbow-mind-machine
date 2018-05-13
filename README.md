@@ -8,10 +8,15 @@ Google Cloud Translate API
 with a pandoc filter.
 
 For documentation about the translation process,
-see [docs/index.md](docs/index.md).
+see the translate-yer-docs repository:
 
-For the Russian documentation, 
-see [ruskie_docs/index.md](ruskie_docs/index.md).
+* documentation: [https://pages.charlesreid1.com/translate-yer-docs/](https://pages.charlesreid1.com/translate-yer-docs/)
+* repo: [https://git.charlesreid1.com/charlesreid1/translate-yer-docs](https://git.charlesreid1.com/charlesreid1/translate-yer-docs)
+
+For the Russian rainbow mind machine documentation:
+
+* HTML: [https://pages.charlesreid1.com/russian-rainbow-mind-machine/](https://pages.charlesreid1.com/russian-rainbow-mind-machine/)
+* Markdown: [ruskie_docs/index.md](ruskie_docs/index.md)
 
 
 

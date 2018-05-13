@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://pages.charlesreid1.com/russian-rainbow-mind-machine/">
+        <link rel="canonical" href="https://pages.charlesreid1.com/russian-rainbow-mind-machine/installing/">
       
       
       
@@ -33,22 +33,22 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="./">
+      <link rel="shortcut icon" href="../">
       <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.2">
     
     
       
-        <title>Ру́сский Радуга ум машина</title>
+        <title>Installing - Ру́сский Радуга ум машина</title>
       
     
     
-      <link rel="stylesheet" href="./assets/stylesheets/application.8d40d89b.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.8d40d89b.css">
       
-        <link rel="stylesheet" href="./assets/stylesheets/application-palette.6079476c.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.6079476c.css">
       
     
     
-      <script src="./assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
       <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
@@ -59,7 +59,7 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
     
-      <link rel="stylesheet" href="./css/custom.css">
+      <link rel="stylesheet" href="../css/custom.css">
     
     
   </head>
@@ -78,7 +78,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <a href="#-" tabindex="1" class="md-skip">
+      <a href="#_1" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -104,7 +104,7 @@
                 Ру́сский Радуга ум машина
               </span>
               <span class="md-header-nav__topic">
-                Home
+                Installing
               </span>
             
           
@@ -206,6 +206,18 @@
       
       
 
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
@@ -216,22 +228,10 @@
       
     
     
-    <a href="." title="Home" class="md-nav__link md-nav__link--active">
-      Home
-    </a>
-    
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="installing/" title="Installing" class="md-nav__link">
+    <a href="./" title="Installing" class="md-nav__link md-nav__link--active">
       Installing
     </a>
+    
   </li>
 
     
@@ -241,7 +241,7 @@
 
 
   <li class="md-nav__item">
-    <a href="quickstart/" title="Quick Start" class="md-nav__link">
+    <a href="../quickstart/" title="Quick Start" class="md-nav__link">
       Quick Start
     </a>
   </li>
@@ -272,7 +272,7 @@
 
 
   <li class="md-nav__item">
-    <a href="keymaker/" title="Keymaker" class="md-nav__link">
+    <a href="../keymaker/" title="Keymaker" class="md-nav__link">
       Keymaker
     </a>
   </li>
@@ -284,7 +284,7 @@
 
 
   <li class="md-nav__item">
-    <a href="shepherd/" title="Shepherd" class="md-nav__link">
+    <a href="../shepherd/" title="Shepherd" class="md-nav__link">
       Shepherd
     </a>
   </li>
@@ -296,7 +296,7 @@
 
 
   <li class="md-nav__item">
-    <a href="sheep/" title="Sheep" class="md-nav__link">
+    <a href="../sheep/" title="Sheep" class="md-nav__link">
       Sheep
     </a>
   </li>
@@ -313,7 +313,7 @@
 
 
   <li class="md-nav__item">
-    <a href="docker/" title="Docker" class="md-nav__link">
+    <a href="../docker/" title="Docker" class="md-nav__link">
       Docker
     </a>
   </li>
@@ -325,7 +325,7 @@
 
 
   <li class="md-nav__item">
-    <a href="dev-workflow/" title="Developers Workflow" class="md-nav__link">
+    <a href="../dev-workflow/" title="Developers Workflow" class="md-nav__link">
       Developers Workflow
     </a>
   </li>
@@ -337,7 +337,7 @@
 
 
   <li class="md-nav__item">
-    <a href="credits/" title="Credits" class="md-nav__link">
+    <a href="../credits/" title="Credits" class="md-nav__link">
       Credits
     </a>
   </li>
@@ -371,53 +371,77 @@
               
                 
                 
-                <h1 id="-">Радуга-ум-машина<a class="headerlink" href="#-" title="Permanent link">&para;</a></h1>
-<p>tinysheep</p>
-<p>Радужная машина разума - расширяемая структура для запуска бот-стрит в
-Python.</p>
-<p>Радужная машина разума помогает в управлении несколькими твиттер-ботами
-(бот-стадами). Он использует объект Keymaker для однократной
-аутентификации с Twitter и использует модель Shepherd-Sheep
-для запуска стаи.</p>
-<p>Радужная машина разума - это основа, потому что она предоставляет
-компоненты (Keymaker, Shepherd и Sheep) с определенными ролями и
-способами взаимодействия.</p>
-<p>машина радужного разума расширяема, чтобы боты не становились скучными.
-Существует ограниченное количество компонентов для расширения (2), эти
-два компонента имеют простой и понятный порядок вызова функций, а
-машина радужного разума пытается использовать разумные значения по
-умолчанию.</p>
-<p>Это означает, что мы начинаем с ботов, которые «просто работают», и мы
-можем постепенно улучшать, расширять, переопределять или
-переопределять поведение, чтобы сделать их все более
-сложными, все еще абстрагируясь от грязных деталей.</p>
-<p>машина радужного разума на pypi</p>
-<p>Радужная машина ума на докер-хабе</p>
-<h1 id="_1">Установка машины радужного разума<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>См. Инструкции по установке.</p>
-<h1 id="_2">Быстрый старт<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
-<p>Посмотрите быстрый старт для краткого руководства по запуску бота и
-нескольких примеров ботов.</p>
-<h1 id="_3">докер<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h1>
-<p>См. Docker для получения дополнительной информации об использовании
-машины радужного разума в контейнере докера.</p>
-<h1 id="dev">Рабочий процесс Dev<a class="headerlink" href="#dev" title="Permanent link">&para;</a></h1>
-<p>См. Dev-workflow для получения информации о рабочем процессе для
-загрузки изменений в pypi и dockerhub.</p>
-<h1 id="_4">Связаться<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h1>
-<p>Связаться с автором: rainbowmindmachine__at__charlesreid1.com</p>
-<h1 id="_5">связи<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h1>
-<p><a href="keymaker/">Keymaker</a></p>
-<p><a href="shepherd/">Пасти</a></p>
-<p><a href="sheep/">Овца</a></p>
-<p><a href="https://pypi.python.org/pypi/rainbowmindmachine/0.4">машина радужного разума на
-pypi</a></p>
-<p><a href="https://hub.docker.com/r/charlesreid1/rainbowmindmachine/">Радужная машина ума на
-докер-хабе</a></p>
-<p><a href="installing/">установка</a></p>
-<p><a href="quickstart/">быстрый старт</a></p>
-<p><a href="docker/">докер</a></p>
-<p><a href="dev-workflow/">DEV-рабочий</a></p>
+                <h1 id="_1">Установка машины радужного разума<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>Чтобы установить машину радужного разума вручную, используйте обычную
+процедуру setup.py:</p>
+<div class="codehilite"><pre><span></span>git clone https://github.com/charlesreid1/rainbow-mind-machine.git
+cd rainbow-mind-machine
+python setup.py build 
+python setup.py install
+</pre></div>
+
+
+<p>Чтобы установить машину радужного разума с пипсом:</p>
+<div class="codehilite"><pre><span></span>pip install rainbowmindmachine
+</pre></div>
+
+
+<h1 id="_2">Необходимые пакеты<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
+<p>Если вам нужен список необходимых пакетов, см. Файл требований. Эти
+пакеты будут установлены с использованием одного из указанных выше
+способов установки.</p>
+<h1 id="-">Что вам нужно для запуска бот-флока<a class="headerlink" href="#-" title="Permanent link">&para;</a></h1>
+<p>Вам понадобится еще несколько вещей, прежде чем вы сможете запустить
+ботовую машину и запустить ее с помощью машины радужного разума.</p>
+<h1 id="_3">Идея бота<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h1>
+<p>Вам нужно будет решить, какое поведение вы хотите, чтобы бот имел,
+поэтому вы знаете, как структурировать репозиторий бота, какие
+данные включать и как расширить овец и пастухов.</p>
+<p>Вы будете определять, как Овцы (одна овца = один бот) заполнят их
+очереди твитов. Это может быть простое действие (получить элемент
+из списка, принадлежащего Овцу), или он может быть сложным (сделать
+запрос URL для получения живых данных, запросить базу данных,
+вызвать API и т. Д.).</p>
+<p>См. Example_flocks /.</p>
+<h1 id="bot">Основной аккаунт Bot<a class="headerlink" href="#bot" title="Permanent link">&para;</a></h1>
+<p>Хорошей практикой является создание приложения Twitter, которое вы
+будете использовать для запуска вашего бот-паства под главной
+учетной записью бота.</p>
+<p>Как и ваше приложение Twitter, главная учетная запись бота может
+использоваться для запуска как можно большего количества
+бот-стад, поэтому вам не нужно делать это конкретным стадом.</p>
+<p>Эта учетная запись также (очевидно) не является самим ботом, поэтому вы
+можете использовать свою личную учетную запись Twitter как основную
+учетную запись бота.</p>
+<h1 id="bot_1">Учетные записи Bot<a class="headerlink" href="#bot_1" title="Permanent link">&para;</a></h1>
+<p>Радужная машина ума обрабатывает все, кроме создания ботов. У вас должен
+быть аккаунт Twitter для каждого созданного бота.</p>
+<p>Никакая настройка учетных записей ботов не требуется до использования
+машины радужного разума - машина радужного разума может позаботиться
+о настройке профиля, цвета профиля, биографии и информации об аватаре.</p>
+<h1 id="twitter">Приложение Twitter<a class="headerlink" href="#twitter" title="Permanent link">&para;</a></h1>
+<p>Вам также необходимо создать приложение Twitter. Вы можете использовать
+одно приложение во всех ваших бот-стадах - нет ограничений на
+количество учетных записей, которое может контролировать одно
+приложение.</p>
+<p>Рекомендуется создать это приложение с помощью учетной записи «bot
+master» и не использовать сами учетные записи ботов.</p>
+<p>Это позволит зарегистрировать ваше приложение для установки бета-бабочек
+с радужным разумом с помощью Twitter и предоставить вам учетные данные
+(«токен потребителя» и «токен секретности потребителя»), который
+позволит вам подключиться к API-интерфейсу Twitter как приложение
+для рисования радуги, о котором вы говорите строить.</p>
+<p>Когда вы регистрируете свое приложение, Twitter предоставит вам ключ
+потребителя и секрет потребителя. Назначьте эти значения переменным
+consumer_key и consumer_secret в файле apikeys.py.</p>
+<div class="codehilite"><pre><span></span>consumer_key    = &#39;123456&#39;
+consumer_secret = &#39;123456&#39;
+</pre></div>
+
+
+<p>Посмотрите файл apikeys.example.py.</p>
+<h1 id="_4">связи<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h1>
+<p><a href="../example_flocks">example_flocks /</a></p>
                 
                   
                 
@@ -438,14 +462,28 @@ pypi</a></p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
+          <a href=".." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Home
+              </span>
+            </div>
+          </a>
         
-          <a href="installing/" title="Installing" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+        
+          <a href="../quickstart/" title="Quick Start" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Installing
+                Quick Start
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -479,13 +517,13 @@ pypi</a></p>
       
     </div>
     
-      <script src="./assets/javascripts/application.0cf9b500.js"></script>
+      <script src="../assets/javascripts/application.0cf9b500.js"></script>
       
-      <script>app.initialize({version:"0.17.3",url:{base:"."}})</script>
+      <script>app.initialize({version:"0.17.3",url:{base:".."}})</script>
       
-        <script src="./search/require.js"></script>
+        <script src="../search/require.js"></script>
       
-        <script src="./search/search.js"></script>
+        <script src="../search/search.js"></script>
       
     
     

@@ -12,15 +12,15 @@ a Python library for writing pandoc filters.
 The syntax is as follows:
 
 ```text
-cat my_markdown_file.md | pandoc -t json -f gfm -s | ./my_panflute_filter.py 
+cat my_markdown_file.md | pandoc -t json -f gfm -s | filters/my_filter.py
 ```
 
-The convention for panflute filters is that each document component
-is passed to the panflute filter, and remains unmodified if the filter
-returns nothing. (This saves the filter some extra work.)
-
-In other words, the filter should decide when to take action and 
-modify a document component.
+The convention for panflute filters is that the JSON document
+is passed into the panflute filter one component at a time.
+If the filter does not return anything, the document element
+will be used as-is in the final document. If a new document
+element is returned, it is used in place of the old 
+document element.
 
 
 

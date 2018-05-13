@@ -1,0 +1,40 @@
+site_name: "Ру́сский Радуга ум машина"
+site_url: https://pages.charlesreid1.com/russian-rainbow-mind-machine
+repo_name: russian-rainbow-mind-machine
+repo_url: https://git.charlesreid1.com/bots/russian-rainbow-mind-machine
+
+copyright: 'Copyright &copy; 2018 <a href="https://charlesreid1.com">Charles Reid</a>, released under the <a href="https://opensource.org/licenses/MIT">MIT License</a>.<br />Photo Credit: <a href="https://www.flickr.com/photos/russloar/">Russ Loar</a> under the <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">CC BY-NC-ND License</a>'
+
+docs_dir: ruskie_docs
+site_dir: site
+extra_css:
+  - css/custom.css
+theme: 
+  name: null
+  custom_dir: 'mkdocs-material/material'
+  palette:
+    primary: 'red'
+    accent: 'red'
+  logo:
+    icon: 'settings_input_component'
+  font:
+    text: 'Ubuntu'
+    code: 'Ubuntu Mono'
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+pages:
+  - 'Home':         'index.md'
+  - 'Installing':   'installing.md'
+  - 'Quick Start':  'quickstart.md'
+  - Components:
+    - 'Keymaker':   'keymaker.md'
+    - 'Shepherd':   'shepherd.md'
+    - 'Sheep':      'sheep.md'
+  - 'Docker':       'docker.md'
+  - 'Developers Workflow': 'dev-workflow.md'
+  - 'Credits':      'credits.md'
+

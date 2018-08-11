@@ -26,7 +26,7 @@ markdown_extensions:
       guess_lang: false
   - toc:
       permalink: true
-pages:
+nav:
   - 'Home':         'index.md'
   - 'Installing':   'installing.md'
   - 'Quick Start':  'quickstart.md'
@@ -38,3 +38,6 @@ pages:
   - 'Developers Workflow': 'dev-workflow.md'
   - 'Credits':      'credits.md'
 
+
+
+strict: true

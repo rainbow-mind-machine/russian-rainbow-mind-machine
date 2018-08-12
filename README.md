@@ -7,6 +7,9 @@ by applying the magic of
 Google Cloud Translate API
 with a pandoc filter.
 
+Ру́сский-Радуга-ум-машина is Russian for russian-rainbow-mind-machine. 
+See [how to pronounce Ру́сский-Радуга-ум-машина](http://tts.imtranslator.net/bF9P).
+
 For documentation about the translation process,
 see the translate-yer-docs repository:
 
